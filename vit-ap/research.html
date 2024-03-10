@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         h2 {
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ddd; /* Change the text color on hover */
+}
+  /* Navigation Bar */
+  .nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav_logo {
+    width: 70px; /* Adjust the width as needed */
+    height: 70px;
+    border-radius: 50px;
+}
+
+.nav_avatar {
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */
+    border-radius: 50%; /* Create a circular shape */
+}
+.search-container {
+    justify-content: center;
+    align-items: center;
+}
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('guest lectures/lec hall.jpg');
+            background-size: cover;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .lecturer {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            max-width: 300px;
+        }
+
+        .lecturer img {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+
+        p {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+     <!--nav-bar-->
+     <div class="nav" id="nav">
+        <img src="v-scout logo.jpg" alt="v" class="nav_logo" />
+        <h2><a href="index.html">Home</a></h2>
+        <h2><a href="map.html">Compass</a></h2>
+        <h2><a href="research.html">Research</a></h2>
+        <h2><a href="events.html">Events</a></h2>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search...">
+          <button onclick="search()"><img src="icon.webp" style="height: 16px; width: 16px;" alt=""></button>
+        </div>
+        <img src="profile.jpg" alt="jk" class="nav_avatar" />
+      </div>
+      <div class="container">
+        <div class="lecturer">
+            <img src="guest lectures/lec1.jpg" alt="Guest Lecturer 1">
+            <h2>Dr.V.B.David John</h2>
+            <p>Quantum Mechanics<br>Sound interactions across multiple modes</p><br>
+            Venue: <p>Einsten Hall, 301, AB1</p><br>
+            Email id: <p>david123@gmail.com</p>
+        </div>
+
+        <div class="lecturer">
+            <img src="guest lectures/lec2.jpg" alt="Guest Lecturer 2">
+            <h2>Prof.Debasis Steven</h2>
+            <p>Neural Network<br>Image Filtering Techniques</p><br>
+            Venue: <p>Newton Hall, 401, AB1</p><br>
+            Email id: <p>debasis153@gmail.com</p>
+        </div>
+    </div>
+</body>
+</html>

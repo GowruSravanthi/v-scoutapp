@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <title>VIT AP University Map</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      #map {
+        width: 100%;
+        height: 80%; /* Adjust the height of the map */
+        margin-bottom: 20px; /* Add margin at the bottom */
+      }
+      .custom-marker {
+        width: 24px;
+        height: 24px;
+        background-color: #f00; /* Red marker */
+        border-radius: 50%;
+        border: 2px solid #fff;
+      }
+      h2 {
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ddd; /* Change the text color on hover */
+}
+  /* Navigation Bar */
+  .nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav_logo {
+    width: 70px; /* Adjust the width as needed */
+    height: 70px;
+    border-radius: 50px;
+}
+
+.nav_avatar {
+    width: 70px; /* Adjust the width as needed */
+    height: 70px; /* Adjust the height as needed */
+    border-radius: 50%; /* Create a circular shape */
+}
+.search-container {
+    justify-content: center;
+    align-items: center;
+}
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+    
+    </style>
+  </head>
+  <body>
+    <!--nav-bar-->
+    <div class="nav" id="nav">
+        <img src="v-scout logo.jpg" alt="v" class="nav_logo" />
+        <h2><a href="index.html">Home</a></h2>
+        <h2><a href="map.html">Compass</a></h2>
+        <h2><a href="research.html">Research</a></h2>
+        <h2><a href="events.html">Events</a></h2>
+        <div class="search-container">
+          <input type="text" id="searchInput" placeholder="Search...">
+          <button onclick="search()"><img src="icon.webp" style="height: 16px; width: 16px;" alt=""></button>
+        </div>
+        <img src="profile.jpg" alt="jk" class="nav_avatar" />
+      </div>
+    <div id="distance"></div>
+    <div id="map"></div>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiZGlhbmF2aWxlIiwiYSI6ImNqaWZ0bm1ycDEwZmczcXFsYTBpOXVtMTgifQ.aLCSo3xuIkz9e4RGzbFIpg";
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const center = [80.49823015264047, 16.49411855]; // VIT AP University's coordinates
+
+        const map = new mapboxgl.Map({
+          container: "map",
+          style: "mapbox://styles/mapbox/streets-v11",
+          center: center,
+          zoom: 16, // Zoom level to show the university's buildings in detail
+        });
+
+        // Add a marker for the university
+        const marker = new mapboxgl.Marker().setLngLat(center).addTo(map);
+
+        // Add a popup to the marker
+        const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+          "VIT AP University"
+        );
+        marker.setPopup(popup);
+      });
+      // Add a custom marker icon
+      const markerElement = document.createElement("div");
+      markerElement.className = "custom-marker";
+      new mapboxgl.Marker(markerElement).setLngLat(center).addTo(map);
+    </script>
+  </body>
+</html>

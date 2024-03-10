@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food</title>
+    <link rel="stylesheet" href="image.css" />
+    <style>
+      .row {
+    text-align: center;
+    margin: 20px;
+}
+
+.row_posters {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    text-align: center;
+    margin: 0 10px;
+    position: relative;
+}
+
+.row__posterLarge {
+    width: 200px; /* Adjust the width as needed */
+    height: 250px; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add background color */
+    color: #fff; /* Optional: Add text color */
+    padding: 5px; /* Optional: Add padding */
+    margin: 0; /* Remove margin */
+    font-size: 14px; /* Adjust font size */
+}
+    </style>
+  </head>
+  <body>
+    <!--nav-bar-->
+    <div class="nav" id="nav">
+      <img src="v-scout logo.jpg" alt="v" class="nav_logo" />
+      <h2><a href="index.html">Home</a></h2>
+      <h2><a href="map.html">Compass</a></h2>
+      <h2><a href="research.html">Research</a></h2>
+      <h2><a href="events.html">Events</a></h2>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="search()"><img src="icon.webp" style="height: 16px; width: 16px;" alt=""></button>
+      </div>
+      <img src="profile.jpg" alt="jk" class="nav_avatar" />
+    </div>
+    <!-- header-->
+    <header>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="banner_2" style="background-image: url('food/tea\ and\ coffee.jpg'); background-size: cover;
+          background-position: center;
+          color: #fff; 
+          text-align: left;
+          padding: 100px 0; 
+          height: 500px;">
+            <div class="banner_contents">
+              <h1 class="banner_title">Tea  &  Coffee</h1>
+              <div class="banner_buttons">
+                <a href="rockplaza.html"><button class="banner_button">navigate</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <div class="banner">
+            <div class="banner_contents">
+              <h1 class="banner_title">Italian Food</h1>
+              <div class="banner_buttons">
+                <a href="rockplaza.html"><button class="banner_button">navigate</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header>
+    <div class="row">
+      <h2>Food Recommendations</h2>
+      <div class="row_posters">
+          <div class="image-container">
+              <a href="rockplaza.html"><img src="food/bits and bites.jpg" alt="" class="row__posterLarge" /></a>
+              <p class="image-text">Bits and Bites</p>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="image-container">
+              <a href="rockplaza.html"><img src="food/icecream 2.jpg" alt="" class="row__posterLarge" />
+              <p class="image-text">Ice Cream</p></a>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="image-container">
+              <a href="rockplaza.html"><img src="food/purivuri.avif" alt="" class="row__posterLarge" /></a>
+              <p class="image-text">Puri Vuri</p>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="image-container">
+              <a href="rockplaza.html"><img src="food/maggi.jpg" alt="" class="row__posterLarge" /></a>
+              <p class="image-text">Maggi</p>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="image-container">
+              <a href="rockplaza.html"><img src="food/shawarma.jpg" alt="" class="row__posterLarge" /></a>
+              <p class="image-text">Shawarma</p>
+          </div>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="image-container">
+              <a href="rockplaza.html"><img src="food/tea.jpeg" alt="" class="row__posterLarge" /></a>
+              <p class="image-text">Tea</p>
+          </div>
+      </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>

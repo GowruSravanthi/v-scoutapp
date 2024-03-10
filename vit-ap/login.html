@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('vitap.jpeg');
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .fa {
+            margin-right: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2><i class="fa fa-lock"></i> Login</h2>
+        <form action="#" method="post">
+            <label for="username"><i class="fa fa-user"></i> Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password"><i class="fa fa-lock"></i> Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit"><a href="index.html">Login</a> </button>
+        </form>
+    </div>
+
+</body>
+</html>

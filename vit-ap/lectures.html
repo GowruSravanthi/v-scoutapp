@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guest Lectures</title>
+    <link rel="stylesheet" href="image.css" />
+    <style>
+      .row {
+    text-align: center;
+    margin: 20px;
+}
+
+.row_posters {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    text-align: center;
+    margin: 0 10px;
+    position: relative;
+}
+
+.row__posterLarge {
+    width: 200px; /* Adjust the width as needed */
+    height: 250px; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add background color */
+    color: #fff; /* Optional: Add text color */
+    padding: 5px; /* Optional: Add padding */
+    margin: 0; /* Remove margin */
+    font-size: 14px; /* Adjust font size */
+}
+    </style>
+  </head>
+  <body>
+    <!--nav-bar-->
+    <div class="nav" id="nav">
+      <img src="v-scout logo.jpg" alt="v" class="nav_logo" />
+      <h2><a href="index.html">Home</a></h2>
+      <h2><a href="map.html">Compass</a></h2>
+      <h2><a href="research.html">Research</a></h2>
+      <h2><a href="events.html">Events</a></h2>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search...">
+        <button onclick="search()"><img src="icon.webp" style="height: 16px; width: 16px;" alt=""></button>
+      </div>
+      <img src="profile.jpg" alt="jk" class="nav_avatar" />
+    </div>
+    <!-- header-->
+    <header>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="banner_2" style="background-image: url('guest lectures/work-shops.webp'); background-size: cover;
+          background-position: center;
+          color: #fff; 
+          text-align: left;
+          padding: 100px 0; 
+          height: 500px;">
+            <div class="banner_contents">
+              <h1 class="banner_title">Work-shop</h1>
+              <div class="banner_buttons">
+                <button class="banner_button">navigate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <div class="banner" style="background-image: url('guest lectures/Industry expert mentors.jpg'); background-size: cover;
+          background-position: center;
+          color: #fff; 
+          text-align: left;
+          padding: 100px 0; 
+          height: 500px;">
+            <div class="banner_contents">
+              <h1 class="banner_title">Industry Lecture</h1>
+              <div class="banner_buttons">
+                <a href="indoorab1.html"><button class="banner_button">navigate</button></a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </header>
+    <div class="row">
+      <h2>Guest Lectures</h2>
+      <div class="row_posters">
+        <div class="image-container">
+          <img src="guest lectures/david-salyers-2.jpg" alt="" class="row__posterLarge" />
+          <p class="image-text">Start Up</p>
+      </div>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="image-container">
+              <img src="guest lectures/lect2.jpg" alt="" class="row__posterLarge" />
+              <p class="image-text">Industrial </p>
+          </div>
+      </div>
+  </div>
+    <script src="script.js"></script>
+  </body>
+</html>
